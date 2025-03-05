@@ -1,7 +1,7 @@
 const users = {
-    "111111": { name: "Abdullo", surname: "Xasanov", coin: 150, xp: 550, password: "011110" },
-    "888888": { name: "Umar", surname: "Karimov", coin: 250, xp: 650, password: "555555" },
-    "750575":{ name: "Shuhrat", surname: "Zoirov", coin: 1170, xp: 880, password: "100001"}
+    "111111": { name: "Abdullo", surname: "Xasanov", coin: 150, xp: 550, group: "F2-1095 | Dilshod Sobitov", password: "011110" },
+    "888888": { name: "Umar", surname: "Karimov", coin: 250, xp: 650, group: "F3-1022 | Doston Elbekov", password: "555555" },
+    "750575":{ name: "Shuhrat", surname: "Zoirov", coin: 1170, xp: 880, group: "F2-2054 | Azamat Ortiqov", password: "100001"}
 };
 
 
@@ -33,8 +33,8 @@ form.addEventListener("submit", function (event) {
 
     if (users[userId] && users[userId].password === userPassword) {
         localStorage.setItem("user", JSON.stringify(users[userId]));
-        window.location.href = "account.html";
+        window.location.href = "home.html";
     } else {
-        alert("ID yoki parol noto‘g‘ri!");
+        alert("ID yoki parol noto'g'ri!");
     }
 });
